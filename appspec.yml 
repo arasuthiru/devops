@@ -1,17 +1,8 @@
-version: 0.2
-files:
-  - source: /index.html
-    destination: /var/www/html/
-hooks:
-  BeforeInstall:
-    - location: scripts/install_dependencies
-      timeout: 300
-      runas: root
-    - location: scripts/start_server
-      timeout: 300
-      runas: root
-  ApplicationStop:
-    - location: scripts/stop_server
-      timeout: 300
-      runas: root
-
+on: 0.1
+phases:
+  pre_build:
+    commands:
+      - apt-get install apache2
+  build:
+    commands:
+      - systemctl status apache2
