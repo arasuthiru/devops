@@ -1,0 +1,3 @@
+#!/bin/bash -x
+systemctl start apache2
+
