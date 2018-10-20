@@ -2,10 +2,10 @@ version: 0.1
 phases:
   install:
     commands:
-      -apt-get install apache2 -y
+      - apt-get install apache2 -y
   pre_build:
     commands:
-      -echo Entering pre_build phase..
+      - echo Entering pre_build phase..
   build:
     commands:
       - echo ##### apache install ####
