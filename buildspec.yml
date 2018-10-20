@@ -2,7 +2,7 @@ version: 0.1
 phases:
   pre_build:
     commands:
-      - apt-get install apache2
+      - sudo apt-get install apache2
   build:
     commands:
-      - systemctl status apache2
+      - sudo systemctl status apache2
